@@ -3,7 +3,10 @@ agent any
     stages { 
         stage ('Build') { 
 	        steps {
-		        sh "mvn --batch-mode -V -U -e install -Dsurefire.useFile=false"
+	        	dir("JenkinsTest") {
+			        sh "mvn --batch-mode -V -U -e install -Dsurefire.useFile=false"
+	        	}
+ 
         	}
         }
         stage ('Test') { 
