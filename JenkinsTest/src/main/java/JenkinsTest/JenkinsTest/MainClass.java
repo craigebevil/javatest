@@ -1,4 +1,4 @@
-package unittest;
+package JenkinsTest.JenkinsTest;
 
 public class MainClass {
 
@@ -11,7 +11,7 @@ public class MainClass {
 	}
 	
 	public static void main(String[] args) {
-		var mainClass = new MainClass(); 
+		 MainClass mainClass = new MainClass(); 
 		if (mainClass.isMainClass()) { 
 			System.out.println("it is a main class");
 		}

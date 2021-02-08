@@ -1,4 +1,4 @@
-package unittest;
+package JenkinsTest.JenkinsTest;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
