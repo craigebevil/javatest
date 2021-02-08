@@ -3,7 +3,7 @@ agent any
     stages { 
         stage ('Build') { 
 	        steps {
-    	    	sh "echo build"
+		        sh "mvn --batch-mode -V -U -e clean deploy -Dsurefire.useFile=false"
         	}
         }
         stage ('Test') { 
