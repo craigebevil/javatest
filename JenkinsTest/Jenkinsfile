@@ -1,0 +1,27 @@
+pipeline { 
+agent any 
+    stages { 
+        stage ('Build') { 
+	        steps {
+		        sh "mvn --batch-mode -V -U -e install -Dsurefire.useFile=false"
+        	}
+        }
+        stage ('Test') { 
+	        steps {
+	        	sh "echo test"
+	        }
+        
+        }
+        stage ('QA') { 
+        	steps {
+	        	sh "echo qa"
+        	}
+        }
+
+        stage ('Deploy') { 
+    		steps {
+	        	sh "echo deploy"
+    		}
+        }
+    }           
+ }
