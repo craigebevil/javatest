@@ -19,6 +19,7 @@ agent any
 			post {
                 always {
                 	dir("JenkinsTest") {
+	                 // Note that the output from this can be accessed via the Jenkins interface under test results and is associated with the job
                    	 junit 'target/surefire-reports/*.xml'
                    	}
                 }
