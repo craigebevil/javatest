@@ -16,7 +16,7 @@ class TestMainClass {
 
 	@Test
 	void testName() throws Exception {
-		var  mainClass = new MainClass(); 
+		MainClass mainClass = new MainClass(); 
 		assertTrue(mainClass.isMainClass());
 	}
 
@@ -24,7 +24,7 @@ class TestMainClass {
 	@DisplayName("Test addition")
 	void testAdd(RepetitionInfo repInfo) throws Exception {
 		System.out.println(repInfo.getTotalRepetitions());
-		var mainClass = new MainClass(); 
+		MainClass mainClass = new MainClass(); 
 		assertTrue(mainClass.isMainClass());
 	}
 }
