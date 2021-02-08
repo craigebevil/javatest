@@ -11,9 +11,16 @@ agent any
         }
         stage ('Test') { 
 	        steps {
-	        	sh "echo test"
-	        }
-        
+	        	dir("JenkinsTest") {
+			        sh "mvn --batch-mode -V -U -e test -Dsurefire.useFile=false"
+	        	}
+			}	 
+			
+			post {
+                always {
+                    junit 'target/surefire-reports/*.xml'
+                }
+            }       
         }
         stage ('QA') { 
         	steps {
